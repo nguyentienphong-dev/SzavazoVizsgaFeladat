@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "aW7vnExHfXA=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\nguyentp\\Desktop\\13\\fp\\Szavazo\\backend\\IskolaiEszkoz.API\\Szavazok.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nguyentp\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\nguyentp\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\nguyentp\\.nuget\\packages\\mysqlconnector\\2.6.2\\mysqlconnector.2.6.2.nupkg.sha512"
+  ],
+  "logs": []
+}

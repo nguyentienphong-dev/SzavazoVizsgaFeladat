@@ -1,0 +1,49 @@
+[
+  {
+    "ContainingType": "Szavazok.API.Controllers.SzavazoController",
+    "Method": "LekereseNevAlapjan",
+    "RelativePath": "api/szavazo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ketNev",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Szavazok.API.Model.Szavazo",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Szavazok.API.Controllers.SzavazoController",
+    "Method": "Szavazas",
+    "RelativePath": "api/szavazo/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "szavazo",
+        "Type": "Szavazok.API.Model.Szavazo",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

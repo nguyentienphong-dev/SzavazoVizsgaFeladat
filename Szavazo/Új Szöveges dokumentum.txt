@@ -1,0 +1,38 @@
+a felületen elöre létrehozott litárol let tudjam kérdezni magamat név alapján a keresés követöen megtudjam jelenyteni magamat a zárolejben lévő név és osztály
+a az összesítésben látszódjon hogy mire szavaztam
+a szavazatom leadását egy külön gomb kezelje
+igazolja vissza a felület hogy sikeres volt e a leadásj
+jelenytse meg a nevemet osztályt és hogy sikeres volt a szavazás
+
+ha kikerestem a nevemet látszódjon hogy ha szavaztam már
+ha beakarnám küldeni a szavazást küldje vissza hogy volt szavazás
+
+használt tech
+heyli mariaDB szerver
+adat: lista automatikusan generált, 4 oszlop (név, osztály, logikai 1/0, kire szavaztam)
+backend api ASP.NET: helyi futtatás, csak a sükséges api-kat hozzuk létre
+frontend: html,css,js
+
+lépések
+adatbázis
+- teszteset + mit hova írjak
+
+server
+- minden dependecies
+- Postman: testesetek
+- testeseteket kell hogy a teszteléshez
+- utasítás: 
+	a srever futtatásához, 
+	kapcsolat ellenőrzés a backend és adatbázis között 
+
+
+
+frontend
+- hozd létre a frontend prezentációs rétegét
+- hozza létre a logikai réteget
+- tesztesetek:
+	A frontendet 
+
+
+
+

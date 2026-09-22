@@ -1,0 +1,87 @@
+:root {
+    --brand-primary: #0d6efd;
+    --brand-primary-light: #e7f1ff;
+    --brand-border: #dee2e6;
+}
+
+.main-card {
+    max-width: 900px;
+    width: 100%;
+}
+
+
+.option-box {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background-color: #fff;
+    border-color: var(--brand-border) !important;
+}
+
+.option-box:hover {
+    border-color: var(--brand-primary) !important;
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+}
+
+
+.option-input:checked + .option-box {
+    border-color: var(--brand-primary) !important;
+    border-width: 2px !important;
+    background-color: var(--brand-primary-light);
+}
+
+.option-input:checked + .option-box .visual-radio {
+    background-color: var(--brand-primary);
+    border-color: var(--brand-primary);
+}
+
+.visual-radio {
+    pointer-events: none;
+}
+
+
+.table thead th {
+    background-color: var(--brand-primary) !important;
+    color: #ffffff !important;
+    border: none;
+    font-weight: 600;
+}
+
+.table th, .table td {
+    text-align: center !important;
+    vertical-align: middle;
+}
+
+
+.btn-vote {
+    font-size: 1.1rem;
+    background-color: var(--brand-primary);
+    border-color: var(--brand-primary);
+    transition: all 0.2s ease;
+}
+
+.btn-vote:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+.btn-vote:active {
+    transform: scale(0.98);
+}
+
+
+#user-status-card {
+    transition: all 0.3s ease;
+    min-height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: var(--brand-border) !important;
+    background-color: #f8f9fa !important;
+}
+
+/* Kereső doboz illeszkedése */
+.search-container {
+    background-color: #f8f9fa;
+    border-color: var(--brand-border) !important;
+}
