@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telefon Szavazás & Adatkereső</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light d-flex align-items-center justify-content-center min-vh-100 py-4">
+
+<div class="main-card shadow-lg bg-white rounded-4 p-4 p-md-5">
+
+    <div class="text-center mb-4">
+        <h2 class="fw-bold text-primary mb-2">Melyik a kedvenc telefonmárkád?</h2>
+        <p class="text-muted mb-0">Kérjük, válaszd ki az egyik opciót a 4 lehetőség közül!</p>
+    </div>
+
+    <form id="poll-form">
+
+        <div class="row g-3 text-center mb-4">
+            
+            <div class="col-6 col-md-3">
+                <label for="phone1" class="w-100 h-100">
+                    <input type="radio" class="option-input d-none" id="phone1" name="brand" value="Apple" required>
+                    <div class="option-box border rounded-3 p-3 h-100 d-flex flex-column align-items-center justify-content-center">
+                        <div class="option-title fw-bold mb-2">Apple</div>
+                        <input type="radio" class="form-check-input visual-radio" tabindex="-1">
+                    </div>
+                </label>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <label for="phone2" class="w-100 h-100">
+                    <input type="radio" class="option-input d-none" id="phone2" name="brand" value="Samsung">
+                    <div class="option-box border rounded-3 p-3 h-100 d-flex flex-column align-items-center justify-content-center">
+                        <div class="option-title fw-bold mb-2">Samsung</div>
+                        <input type="radio" class="form-check-input visual-radio" tabindex="-1">
+                    </div>
+                </label>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <label for="phone3" class="w-100 h-100">
+                    <input type="radio" class="option-input d-none" id="phone3" name="brand" value="Xiaomi">
+                    <div class="option-box border rounded-3 p-3 h-100 d-flex flex-column align-items-center justify-content-center">
+                        <div class="option-title fw-bold mb-2">Xiaomi</div>
+                        <input type="radio" class="form-check-input visual-radio" tabindex="-1">
+                    </div>
+                </label>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <label for="phone4" class="w-100 h-100">
+                    <input type="radio" class="option-input d-none" id="phone4" name="brand" value="Huawei">
+                    <div class="option-box border rounded-3 p-3 h-100 d-flex flex-column align-items-center justify-content-center">
+                        <div class="option-title fw-bold mb-2">Huawei</div>
+                        <input type="radio" class="form-check-input visual-radio" tabindex="-1">
+                    </div>
+                </label>
+            </div>
+
+        </div>
+
+        <hr class="my-4 text-muted opacity-25">
+
+        <div class="row align-items-stretch g-4 mb-3">
+            
+            <div class="col-md-8 col-lg-8">
+                <div class="search-container rounded-3 p-3 border h-100">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <h6 class="fw-bold text-primary mb-0">Személyes Adatok / Szavazó keresése</h6>
+                    </div>
+                    
+                    <div class="input-group input-group-sm mb-3">
+                        <input type="text" id="user-search" class="form-control" placeholder="Keresés név alapján...">
+                        <button class="btn btn-primary px-3" type="button" id="search-btn">Keresés</button>
+                    </div>
+
+                    <div class="table-responsive rounded-2 border">
+                        <table class="table table-sm table-hover align-middle mb-0 bg-white">
+                            <thead>
+                                <tr>
+                                    <th>Név</th>
+                                    <th>Osztályzat</th>
+                                    <th>Szavazott</th>
+                                    <th>Mire szavazott</th>
+                                </tr>
+                            </thead>
+                            <tbody id="user-table-body">
+                                <tr>
+                                    <td colspan="4" class="text-center text-muted py-3">Keress egy szavazóra...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-lg-4 d-flex flex-column justify-content-between gap-2">
+                
+                <div class="bg-light p-2 border rounded-3 text-start">
+                    <label for="voter-name" class="form-label small fw-bold text-primary mb-1">A te neved / azonosítód:</label>
+                    <input type="text" id="voter-name" class="form-control form-control-sm" placeholder="Pl. Kovács János" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-vote shadow-sm w-100 py-2 fw-bold">
+                    Szavazat Küldése
+                </button>
+
+                <div id="user-status-card" class="card text-center p-2 shadow-sm rounded-3">
+                    <div class="small text-primary fw-bold text-uppercase mb-1" style="font-size: 0.75rem; letter-spacing: 0.5px;">Szavazási státusz</div>
+                    
+                    <div id="status-content">
+                        <span class="badge bg-secondary mb-1">Keresés szükséges</span>
+                        <p class="small text-muted mb-0" style="font-size: 0.8rem;">Keress rá egy felhasználóra a státuszhoz.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="result-message" class="alert text-center mt-3 mb-0 rounded-3 d-none" role="alert">
+            <h5 class="alert-heading fw-bold mb-1"></h5>
+            <p class="mb-0" id="selected-text"></p>
+        </div>
+
+    </form>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
