@@ -16,7 +16,7 @@ namespace Szavazok.API.Controllers
         }
 
         // GET http://localhost:5242/api/szavazo
-        [HttpGet]
+        [HttpGet("{ketNev}")]
         public ActionResult<Szavazo> LekereseNevAlapjan(string ketNev)
         {
             Szavazo szavazo = _szavazoSercive.LekereseNevAlapjan(ketNev);
@@ -31,7 +31,7 @@ namespace Szavazok.API.Controllers
         }
 
         // PUT http://localhost:5242/api/szavazo/1
-        [HttpPut("{id}")]
+        [HttpPut("{szavazo}")]
         public IActionResult Szavazas(Szavazo szavazo)
         {
             bool sikeres = _szavazoSercive.Szavazas(szavazo);

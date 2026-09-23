@@ -2,7 +2,7 @@
   {
     "ContainingType": "Szavazok.API.Controllers.SzavazoController",
     "Method": "LekereseNevAlapjan",
-    "RelativePath": "api/szavazo",
+    "RelativePath": "api/szavazo/{ketNev}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -10,7 +10,7 @@
       {
         "Name": "ketNev",
         "Type": "System.String",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [
@@ -28,7 +28,7 @@
   {
     "ContainingType": "Szavazok.API.Controllers.SzavazoController",
     "Method": "Szavazas",
-    "RelativePath": "api/szavazo/{id}",
+    "RelativePath": "api/szavazo/{szavazo}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -39,7 +39,7 @@
         "IsRequired": true
       },
       {
-        "Name": "id",
+        "Name": "szavazo",
         "Type": "",
         "IsRequired": true
       }

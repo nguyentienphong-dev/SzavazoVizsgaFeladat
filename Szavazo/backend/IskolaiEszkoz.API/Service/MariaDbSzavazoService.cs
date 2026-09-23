@@ -32,7 +32,7 @@ namespace Szavazok.API.Service
                     {
                         Nev = olvaso["nev"].ToString(),
                         Osztaly = olvaso["osztaly"].ToString(),
-                        Szavazott = (olvaso["szavazott"] == "1" ? true : false),
+                        Szavazott = olvaso["szavazott"] == "1" ? true : false,
                         KireSzavazott = olvaso["kireSzavazott"].ToString()
                     };
 
