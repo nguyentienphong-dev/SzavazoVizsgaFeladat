@@ -1,26 +1,22 @@
 @host = http://localhost:5242
 
 ### 1. Összes eszköz lekérése
-GET {{host}}/api/szavazok
-
+GET {{host}}/api/szavazo
+Content-Type: application/json
+{
+  "nev": "Szabó Bence"
+}
 ###
 
 ### 3. Eszköz módosítása
-PUT {{host}}/api/szavazok/1
+PUT {{host}}/api/szavazo/1
 Content-Type: application/json
 
 {
-  "nev": "Módosított tanári laptop",
-  "leltariSzam": "IT-001",
-  "kategoria": "Laptop",
-  "gyarto": "Dell",
-  "modell": "Latitude 5420",
-  "terem": "A315",
-  "allapot": "Jó",
-  "hasznalatbanVan": true,
-  "kolcsonozheto": true,
-  "beszerzesiAr": 280000,
-  "beszerzesDatuma": "2022-09-01"
+  "nev": "Szabó Bence",
+  "osztaly": "9.B",
+  "szavazott": "1",
+  "kireSzavazott": "Huawei"
 }
 
 ###
